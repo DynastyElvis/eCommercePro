@@ -13,13 +13,13 @@
       <link rel="shortcut icon" href="images/favicon.png" type="">
       <title>Famms - Fashion HTML Template</title>
       <!-- bootstrap core css -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      <link rel="stylesheet" type="text/css" href="home/css/bootstrap.css" />
       <!-- font awesome style -->
-      <link href="css/font-awesome.min.css" rel="stylesheet" />
-      <!-- Custom styles for this template -->
-      <link href="css/style.css" rel="stylesheet" />
-      <!-- responsive style -->
-      <link href="css/responsive.css" rel="stylesheet" />
+      <link href="home/css/font-awesome.min.css" rel="stylesheet" />
+      <!-- Custom home/styles for this template -->
+      <link href="home/css/style.css" rel="stylesheet" />
+      <!-- responshome/ive style -->
+      <link href="home/css/responsive.css" rel="stylesheet" />
    </head>
    <body>
       <div class="hero_area">
@@ -1003,12 +1003,12 @@
          </p>
       </div>
       <!-- jQery -->
-      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="home/js/jquery-3.4.1.min.js"></script>
       <!-- popper js -->
-      <script src="js/popper.min.js"></script>
-      <!-- bootstrap js -->
-      <script src="js/bootstrap.js"></script>
+      <script src="home/js/popper.min.js"></script>
+      <!-- bootstrahome/p js -->
+      <script src="home/js/bootstrap.js"></script>
       <!-- custom js -->
-      <script src="js/custom.js"></script>
+      <script src="home/js/custom.js"></script>
    </body>
-</html>
+</html> 

@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('homr.userpage');
+        return view('home.userpage');
     }
 
     public function redirect()
