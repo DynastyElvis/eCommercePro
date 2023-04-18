@@ -15,7 +15,7 @@
 [![Github][github-shield]][github-url]
 
 ## User Dashboard
-![Github Banner](https://github.com/DynastyElvis/Audio-Player/blob/master/public/Screenshot%20from%202023-04-15%2011-37-57.png)
+![Github Banner](https://github.com/DynastyElvis/eCommercePro/blob/master/public/images/Screenshot%20from%202023-04-18%2014-50-56.png)
 
 <!-- my social media links -->
 
@@ -33,7 +33,7 @@
 [github-shield]: https://img.shields.io/badge/-Github-black.svg?style=flat-square&logo=github&color=555&logoColor=white
 
 ## Admin Dashboard
-![Github Banner](https://github.com/DynastyElvis/Audio-Player/blob/master/public/Screenshot%20from%202023-04-15%2011-37-57.png)
+![Github Banner](https://github.com/DynastyElvis/eCommercePro/blob/master/public/images/Screenshot%20from%202023-04-18%2014-49-14.png)
 
 
 
