@@ -20,6 +20,11 @@
         <div class="content-wrapper">
             <div class="div_center">
                 <h2>Add Category</h2>
+                <form action="{{ url('/add_category') }}" method="POST">
+                    @csrf
+                    <input type="text" name="category" placeholder="Write the Category Name">
+                    <input type="submit" class="btn btn-primary" name="submit" value="Add Category">
+                </form>                
             </div>
         </div>
     </div>

@@ -30,3 +30,4 @@ Route::middleware([
 });
 
 route::get('redirect',[HomeController::class,'redirect']);
+route::post('/add_category',[AdminController::class,'add_category']);
