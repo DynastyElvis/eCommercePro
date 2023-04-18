@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    Category
-</body>
+  <head>
+    @include('admin.css')
+<style type="text/css">
+    .div_center
+    {
+        text-align: center;
+        padding-top: 40px;
+    }
+</style>
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_sidebar.html -->
+      @include('admin.sidebar')
+      <!-- partial -->
+      @include('admin.header')
+      <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="div_center">
+                <h2>Add Category</h2>
+            </div>
+        </div>
+    </div>
+    <!-- partial -->
+        <!-- plugins:js -->
+        @include('admin.script')
+
+    <!-- End custom js for this page -->
+  </body>
 </html>
