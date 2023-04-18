@@ -7,6 +7,35 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+<!-- social media connecting shield -->
+
+[![Instagram][instagram-shield]][instagram-url]
+[![Twitter][twitter-shield]][twitter-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Github][github-shield]][github-url]
+
+![Github Banner](https://github.com/DynastyElvis/Audio-Player/blob/master/public/Screenshot%20from%202023-04-15%2011-37-57.png)
+
+<!-- my social media links -->
+
+[instagram-url]: https://www.instagram.com/dynastyelvis/
+[twitter-url]: https://twitter.com/Dev_Rono
+[linkedin-url]: https://www.linkedin.com/in/kipkemoi-elvis-aa3548209
+[github-url]: https://github.com/DynastyElvis
+
+<!-- shield icon links -->
+
+
+[instagram-shield]: https://img.shields.io/badge/-Instagram-black.svg?style=flat-square&logo=instagram&color=555&logoColor=white
+[twitter-shield]: https://img.shields.io/badge/-Twitter-black.svg?style=flat-square&logo=twitter&color=555&logoColor=white
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[github-shield]: https://img.shields.io/badge/-Github-black.svg?style=flat-square&logo=github&color=555&logoColor=white
+
+
+
+## Available Scripts
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
