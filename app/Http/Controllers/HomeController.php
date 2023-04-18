@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+    public function index()
+    {
+        return view('homr.userpage');
+    }
+
     public function redirect()
     {
         $usertype=Auth::user()->usertype;
