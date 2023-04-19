@@ -18,6 +18,7 @@ use App\Http\Controllers\AdminController;
 route::get('',[HomeController::class,'index']);
 
 route::get('/view_category',[AdminController::class,'view_category']);
+route::get('/delete_category/{id}',[AdminController::class,'delete_category']);
 
 Route::middleware([
     'auth:sanctum',
