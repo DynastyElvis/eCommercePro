@@ -31,6 +31,10 @@ class AdminController extends Controller
         }
     }
     
+    public function view_product()
+    {
+        return view('admin.product');
+    }
 }
 
 
