@@ -21,10 +21,16 @@ class AdminController extends Controller
     }
     public function delete_category($id)
     {
-        $data=category::find($id);
-        $data->delete();
-        return redirect()->back();
+        $data = category::find($id);
+    
+        if ($data) {
+            $data->delete();
+            return redirect()->back()->with('message', 'Category Deleted Successfully');
+        } else {
+            return redirect()->back()->with('message', 'Category Not Found');
+        }
     }
+    
 }
 
 
