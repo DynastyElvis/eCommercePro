@@ -33,7 +33,12 @@ class AdminController extends Controller
     
     public function view_product()
     {
-        return view('admin.product');
+        $category = new Category();
+        return view('admin.product', compact('category'));
+    }
+    public function add_product(Request $request)
+    {
+        // return view('admin.product');
     }
 }
 
