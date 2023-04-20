@@ -39,7 +39,8 @@
                 <div class="div_center">
                     <h1 class="font_size">Add Product</h1>
 
-
+                        <form action="{{url('/add_product')}}" enctype="multipart/form-data" method="POST">
+                          @csrf
 
                         <div class="div_design">
                           <label>Product title</label>
