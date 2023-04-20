@@ -54,9 +54,9 @@
                           <label >Product price</label>
                           <input type="number" name="price" placeholder="Write a price"  required="">
                         </div>
-                        <div class="div_design>
-                          <label>Discount price </label>
-                          <input type="number" name="dis_rice" placeholder="Write a price">
+                        <div class="div_design">
+                          <label> Discount price </label>
+                          <input type="number" name="dis_price" placeholder="Write a price">
                         </div>
                         <div class="div_design">
                           <label>Product quantity</label>
@@ -65,7 +65,7 @@
                         <div class="div_design">
                           <label>Product category</label>
                         <select name="category"  required="">
-                          <option value="" selected="" >add category</option>
+                          <option value="{{$category->category_name}}" selected="" >add category</option>
 
                           @foreach($category as $category)
                           <option>{{$category->category_name}}</option>

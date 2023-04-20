@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Category;
-
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -38,7 +38,18 @@ class AdminController extends Controller
     }
     public function add_product(Request $request)
     {
-        // return view('admin.product');
+        $product=new product;
+        $product->title=$request->title;
+        $product->description=$request->description;
+        $product->price=$request->price;
+        $product->discounted_price=$request->dis_price;
+        $product->category=$request->category;
+        $image=$request->image;
+        $imagename=time().'.'.$image->getClientOriginalExtension;
+        $request->image->move('product', $imagename);
+        $product->image=$imagename;
+        $product->save();
+        return redirect()->back();
     }
 }
 
