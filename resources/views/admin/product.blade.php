@@ -68,7 +68,7 @@
                           <option value="" selected="" >add category</option>
 
                           @foreach($category as $category)
-                          <option>shirt</option>
+                          <option>{{$category->category_name}}</option>
                           @endforeach
                         </select>  
                           </div>
