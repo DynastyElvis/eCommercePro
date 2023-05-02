@@ -20,9 +20,10 @@
       @include('admin.header')
       <div class="main-panel">
         <div class="content-wrapper">
+            <h2 style="text-align: center">All Products</h2>
             <table class="center">
                 <tr>
-                    <th>Product title</th>
+                    <th>title</th>
                     <th>description</th>
                     <th>quantity</th>
                     <th>category</th>
@@ -30,14 +31,16 @@
                     <th>discounted price</th>
                     <th>product image</th>
                 </tr>
+                @foreach($product as $product)
                 <tr>
-                    <td>toy</td>
-                    <td>good</td>
-                    <td>ten </td>
-                    <td>121</td>
-                    <td>123</td>
-                    <td>123</td>
+                    <td>{{$product->title}}</td>
+                    <td>{{$product->description}}</td>
+                    <td>{{$product->quantity}} </td>
+                    <td>{{$product->title}}</td>
+                    <td>{{$product->title}}</td>
+                    <td>{{$product->title}}</td>
                 </tr>
+                @endforeach
             </table>
         </div>
     </div>
