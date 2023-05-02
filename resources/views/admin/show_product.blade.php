@@ -8,6 +8,7 @@
             margin:auto;
             width: 50%;
             border: 2px solid wheat;
+            margin-top: 40px;
         }
     </style>
   </head>
