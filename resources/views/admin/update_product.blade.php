@@ -53,9 +53,8 @@
                 <div class="div_center">
                     <h1 class="font_size">Update Product</h1>
 
-                        <form action="{{url('/add_product')}}" enctype="multipart/form-data" method="POST">
+                        <form action="{{url('/update_product_confirm', $product->id)}}" enctype="multipart/form-data" method="POST">
                           @csrf
-
                         <div class="div_design">
                           <label>Product title</label>
                           <input class="text_colour" type="text" name="title" placeholder="Write a Title" required="" value="{{$product->title}}">
@@ -81,9 +80,9 @@
                         <select name="category"  required="">
                           <option value="{{$product->category}}" selected="" >{{$product->title}}"</option>
 
-                          {{-- @foreach($category as $category)
+                          @foreach($category as $category)
                           <option>{{$category->category_name}}</option>
-                          @endforeach --}}
+                          @endforeach 
                         </select>  
                           </div>
                           <div class="div_design">
@@ -95,7 +94,7 @@
                             <input type="file" name="image" required="">
                           </div>
                           <div class="div_design">
-                            <input type="submit" value="submit added product" btb btn-primary>  
+                            <input type="submit" value="update product" btb btn-primary>  
                           </div>
 
                         </form>
