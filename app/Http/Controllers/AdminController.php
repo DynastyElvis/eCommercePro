@@ -67,7 +67,7 @@ class AdminController extends Controller
     public function update_product($id)
     {
         $product=product::find($id);
-        $product->update();
+        // $product->update();
         return view('admin.update_product', compact('product'));
 
         // return redirect()->back();
