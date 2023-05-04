@@ -88,7 +88,7 @@ class AdminController extends Controller
             $product->image=$imagename;
         }
         $product->save();
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Product updated successfully');
     }
 
 
