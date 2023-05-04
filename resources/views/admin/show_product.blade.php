@@ -45,7 +45,7 @@
                     <td>
                         <img style="width: 200px; height: 200px" src="/product/{{$product->image}}" alt="">
                     </td>
-                    <td><a class="btn btn-danger" href="">delete</a></td>
+                    <td><a class="btn btn-danger" href="{{url('delete_product', $product->id)}}">delete</a></td>
                     <td><a class="btn btn-success" href="">edit</a></td>
                 </tr>
                 @endforeach
