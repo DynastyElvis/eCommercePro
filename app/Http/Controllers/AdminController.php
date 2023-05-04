@@ -72,6 +72,22 @@ class AdminController extends Controller
 
         // return redirect()->back();
     }
+    public function update_product_confirm(Request $request,$id)
+    {
+        $product=product::find($id);
+        $product->title=$request->title;
+        $product->description=$request->description;
+        $product->price=$request->price;
+        $product->discounted_price=$request->dis_price;
+        $product->quantity=$request->quantity;
+        $image=$request->image;
+        $imagename=time() . '.' . $image->getClientOriginalExtension();
+        $request->image->move('product', $imagename);
+        $product->image=$imagename;
+        $product->save();
+        return redirect()->back();
+    }
+
 
 }
 
