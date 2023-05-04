@@ -91,7 +91,7 @@
                          </div>
                           <div class="div_design">
                             <label>change product image</label>
-                            <input type="file" name="image" required="">
+                            <input type="file" name="image" >
                           </div>
                           <div class="div_design">
                             <input type="submit" value="update product" btb btn-primary>  
