@@ -87,7 +87,11 @@
                         </select>  
                           </div>
                           <div class="div_design">
-                            <label>Product image</label>
+                            <label>current product image</label>
+                            <img  height="100" width="100" src="/product/{{$product->image}}" alt="">
+                         </div>
+                          <div class="div_design">
+                            <label>change product image</label>
                             <input type="file" name="image" required="">
                           </div>
                           <div class="div_design">
