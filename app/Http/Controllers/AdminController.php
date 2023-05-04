@@ -81,9 +81,12 @@ class AdminController extends Controller
         $product->discounted_price=$request->dis_price;
         $product->quantity=$request->quantity;
         $image=$request->image;
-        $imagename=time() . '.' . $image->getClientOriginalExtension();
-        $request->image->move('product', $imagename);
-        $product->image=$imagename;
+        if ($image)
+        {
+            $imagename=time() . '.' . $image->getClientOriginalExtension();
+            $request->image->move('product', $imagename);
+            $product->image=$imagename;
+        }
         $product->save();
         return redirect()->back();
     }
