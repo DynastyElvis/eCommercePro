@@ -29,7 +29,24 @@
          <!-- slider section -->
          <!-- end slider section -->
       </div>
-
+      <div>
+        <table>
+            <tr>
+                <th>product title</th>
+                <th>quantity</th>
+                <th>price</th>
+                <th>image</th>
+                <th>action</th>
+            </tr>
+            <tr>
+                <th>shirt</th>
+                <th>233</th>
+                <th>33211</th>
+                <th>image</th>
+                <th>remove</th>
+            </tr>
+        </table>
+      </div>
       <!-- footer start -->
           @include('home.footer')
       <!-- footer end -->
