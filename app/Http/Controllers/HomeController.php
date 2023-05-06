@@ -126,7 +126,7 @@ class HomeController extends Controller
 
             //dont return here. BE CAREFUL!!!
         }
-        return redirect()->back();
+        return redirect()->back()->with('We have received your order successfully');
 
     }
 
