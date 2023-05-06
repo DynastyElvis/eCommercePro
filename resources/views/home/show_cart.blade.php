@@ -20,6 +20,22 @@
       <link href="home/css/style.css" rel="stylesheet" />
       <!-- responshome/ive style -->
       <link href="home/css/responsive.css" rel="stylesheet" />
+      <style>
+        .center{
+            margin:auto;
+            width:50%;
+            text-align: center;
+            padding: 30px;
+
+        }
+        table,th,td{
+            border: 1px solid grey;
+        }
+        .th_deg{
+            font-size: 30px;
+            padding: 30px;
+        }
+      </style>
    </head>
    <body>
       <div class="hero_area">
@@ -28,15 +44,14 @@
         {{-- header sction --}}
          <!-- slider section -->
          <!-- end slider section -->
-      </div>
-      <div>
+      <div class="center">
         <table>
             <tr>
-                <th>product title</th>
-                <th>quantity</th>
-                <th>price</th>
-                <th>image</th>
-                <th>action</th>
+                <th class="th_deg">Product title</th>
+                <th class="th_deg">Quantity</th>
+                <th class="th_deg">Price</th>
+                <th class="th_deg">Image</th>
+                <th class="th_deg">Action</th>
             </tr>
             <tr>
                 <th>shirt</th>

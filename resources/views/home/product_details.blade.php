@@ -28,7 +28,6 @@
         @include('home.header')
         {{-- header sction --}}
          <!-- slider section -->
-      </div>
         <div class="col-sm-6 col-md-4 col-lg-4" style="margin: auto; width: 50%; padding: 30px:">
             <div class="img-box" style="padding:20px;" >
                 <img src="product/{{$product->image}}" alt="">

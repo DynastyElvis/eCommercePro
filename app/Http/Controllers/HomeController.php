@@ -77,6 +77,7 @@ class HomeController extends Controller
 
     public function show_cart()
     {
+        $user=Auth::user();
         return view('home.show_cart');
     }
 
