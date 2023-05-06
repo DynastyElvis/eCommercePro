@@ -8,6 +8,9 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Order;
+use Session;
+use Stripe;
+
 
 
 class HomeController extends Controller
@@ -81,10 +84,10 @@ class HomeController extends Controller
         if(Auth::id())
         {
             $id=Auth::user()->id;
-            $cart=cart::where('user_id','=', $id)->get();//when using cart table make sure you add model path at the top
+            $cart=cart::where('user_id','=', $id)->get(); //when using cart table make sure you add model path at the top
             return view('home.show_cart', compact('cart'));
         } 
-
+        
         else
         {
             return redirect('login');
@@ -122,13 +125,28 @@ class HomeController extends Controller
             $cart_id=$data->id;//delete from carts and put to orders table
             $cart=cart::find($cart_id);
             $cart->delete();
-
-
             //dont return here. BE CAREFUL!!!
         }
         return redirect()->back()->with('message', 'We have received your order successfully');
-
+    }
+    public function stripe($totalprice)
+    {
+        return view('home.stripe', compact('totalprice'));
+    }
+    public function stripePost(Request $request,$totalprice)
+    {
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+    
+        Stripe\Charge::create ([
+                "amount" => $totalprice * 100,
+                "currency" => "usd",
+                "source" => $request->stripeToken,
+                "description" => "Thanks for payment" 
+        ]);
+      
+        Session::flash('success', 'Payment successful!');
+              
+        return back();
     }
 
-
-}
+}                                                                                                         
