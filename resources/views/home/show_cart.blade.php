@@ -35,6 +35,10 @@
             font-size: 30px;
             padding: 30px;
         }
+        .pic{
+            height: 30x;
+            width: 60px;
+        }
       </style>
    </head>
    <body>
@@ -53,14 +57,18 @@
                 <th class="th_deg">Image</th>
                 <th class="th_deg">Action</th>
             </tr>
+            <?php $totalprice=0; ?>
+            
             @foreach ($cart as $cart)                
             <tr>
                 <td>{{$cart->product_title}}</td>
                 <td>{{$cart->quantity}}</td>
                 <td>{{$cart->price}}</td>
-                {{-- <th>{{$cart->product_title}}</th>
-                <th>{{$cart->product_title}}</th> --}}
+                <th><img class="pic" src="/product/{{$cart->image}}" alt=""></th>
+                <th>{{$cart->product_title}}</th>
             </tr>
+
+            <?php $totalprice=$totalprice * $cart->price; ?>
             @endforeach
 
         </table>
