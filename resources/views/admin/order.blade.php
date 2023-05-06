@@ -50,7 +50,8 @@
                         <th class="th_deg">price</th>
                         <th class="th_deg">payment status</th>
                         <th class="th_deg">delivery status</th>
-                        <th class="th_deg">image</th>
+                        {{-- <th class="th_deg">image</th> --}}
+                        <th class="th_deg">Delivered</th>
                     </tr>
 
                     @foreach ($order as $order)
@@ -65,6 +66,10 @@
                         <td>{{$order->price}}</td>
                         <td>{{$order->payment_status}}</td>
                         <td>{{$order->delivery_status}}</td>
+                        {{-- <td>
+                            <img class="width:40px; height 10px;" src="/product/{{$order->image}}" alt="">
+                        </td> --}}
+                        <td><a href="{{url('delivered', $order->id)}}" class="btn btn-primary">Delivered</a></td>
                     </tr>
                     @endforeach
                 </table>
