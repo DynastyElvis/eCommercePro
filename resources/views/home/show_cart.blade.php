@@ -58,20 +58,28 @@
                 <th class="th_deg">Action</th>
             </tr>
             <?php $totalprice=0; ?>
-            
+
             @foreach ($cart as $cart)                
             <tr>
                 <td>{{$cart->product_title}}</td>
                 <td>{{$cart->quantity}}</td>
-                <td>{{$cart->price}}</td>
+                <td>KES. {{$cart->price}}</td>
                 <th><img class="pic" src="/product/{{$cart->image}}" alt=""></th>
-                <th>{{$cart->product_title}}</th>
+                <th><a  class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')" href="{{url('/remove_cart', $cart->id)}}">Delete</a></th>
             </tr>
 
-            <?php $totalprice=$totalprice * $cart->price; ?>
+            <?php $totalprice=$totalprice + $cart->price ?>
             @endforeach
 
         </table>
+        <div>
+            <th >Tally Kes. {{$totalprice}}</th>
+        </div>
+        <div><br>
+            <h1>Proceed to order</h1>
+            <a href="{{url('cash_order')}}" class="btn btn-danger">Cash on delivery</a>
+            <a href="" class="btn btn-danger">Pay using Card</a>
+        </div>
       </div>
       <!-- footer start -->
           @include('home.footer')
