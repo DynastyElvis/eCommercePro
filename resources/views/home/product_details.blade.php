@@ -2,6 +2,7 @@
 <html>
    <head>
       <!-- Basic -->
+      <base href="/public">
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <!-- Mobile Metas -->
@@ -27,32 +28,29 @@
         @include('home.header')
         {{-- header sction --}}
          <!-- slider section -->
-         @include('home.slider')
-         <!-- end slider section -->
       </div>
-      <!-- why section -->
-      @include('home.why')
+        <div class="col-sm-6 col-md-4 col-lg-4" style="margin: auto; width: 50%; padding: 30px:">
+            <div class="img-box" style="padding:20px;" >
+                <img src="product/{{$product->image}}" alt="">
+            </div>
+            <div class="detail-box">
+                <h5>{{$product->title}}</h5>
 
-      <!-- end why section -->
-      
-      <!-- arrival section -->
-      @include('home.arrival')
-      <!-- end arrival section -->
-      
-      <!-- product section -->
-      @include('home.product')
+                @if ($product->discounted_price!=null)
+                <h6 style="color: red;">Disc Ksh.{{$product->discounted_price}}</h6>    
+                <h6 style="text-decoration: line-through;">{{$product->price}}</h6>     
+                @else
+                <h6 >{{$product->price}}</h6>          
+                @endif
+                <h6 >Category: {{$product->category}}</h6>          
+                <h6 >Description :{{$product->description}}</h6>          
+                <h6 >Available Quantity :{{$product->quantity}}</h6>    
+                
+                <a class="btn btn-primary" href="">Add to cart</a><br><br>
 
-      <!-- end product section -->
-
-      <!-- subscribe section -->
-      @include('home.subscribe')
-      <!-- end subscribe section -->
-
-      <!-- client section -->
-          @include('home.client')
-      <!-- end client section -->
-
-      <!-- footer start -->
+            </div>
+        </div>
+           <!-- footer start -->
           @include('home.footer')
       <!-- footer end -->
       <div class="cpy_">
