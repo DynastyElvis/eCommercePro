@@ -90,7 +90,10 @@ class AdminController extends Controller
         $product->save();
         return redirect()->back()->with('message', 'Product updated successfully');
     }
-
+    public function order(Request $request)
+    {
+        return view('admin.order');
+    }
 
 }
 

@@ -32,7 +32,7 @@ Route::middleware([
 //ADMIN
 route::post('/add_category',[AdminController::class,'add_category']);
 route::get('/show_product',[AdminController::class,'show_product']);
-route::get('/show_product',[AdminController::class,'show_product']);
+route::get('/order',[AdminController::class,'order']);
 route::get('/delete_product/{id}',[AdminController::class,'delete_product']);
 route::get('/update_product/{id}',[AdminController::class,'update_product']);
 route::post('/update_product_confirm/{id}',[AdminController::class,'update_product_confirm']); //post because we are updating
@@ -51,6 +51,3 @@ route::get('/remove_cart/{id}',[HomeController::class,'remove_cart']);
 route::get('/cash_order  ',[HomeController::class,'cash_order']); //post because we are updating
 route::get('/stripe/{totalprice}',[HomeController::class,'stripe']); //post because we are updating
 route::get('/stripe/{totalprice}',[HomeController::class,'stripePost'])->name('stripe.post'); //post because we are updating
-
-
-order
