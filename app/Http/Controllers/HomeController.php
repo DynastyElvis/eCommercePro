@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Product;
+use App\Models\Cart;
 
 
 class HomeController extends Controller
@@ -44,6 +45,8 @@ class HomeController extends Controller
             $user=Auth::user();
             // dd($user);// check raw data
             $product=product::find($id);
+            $cart=new cart;
+            $cart->name=$user->name;
         }
         else
         {
