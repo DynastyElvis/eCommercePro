@@ -47,6 +47,7 @@
                         <th class="th_deg">contact</th>
                         <th class="th_deg">product</th>
                         <th class="th_deg">quantity</th>
+                        <th class="th_deg">price</th>
                         <th class="th_deg">payment status</th>
                         <th class="th_deg">delivery status</th>
                         <th class="th_deg">image</th>
