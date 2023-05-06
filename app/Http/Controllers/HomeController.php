@@ -119,6 +119,11 @@ class HomeController extends Controller
             $order->payment_status='cash on delivery';
             $order->delivery_status='processing...';
             $order->save();
+            $cart_id=$data->id;//delete from carts and put to orders table
+            $cart=cart::find($cart_id);
+            $cart->delete();
+
+
             //dont return here. BE CAREFUL!!!
         }
         return redirect()->back();
