@@ -52,9 +52,18 @@ class HomeController extends Controller
             $cart->address=$user->address;
             $cart->user_id=$user->id; 
             $cart->Product_title=$product->title;
-            $cart->price=$product->price;
+
+            if($product->discounted_price!=null)
+            {
+                $cart->price=$product->discounted_price;
+            }
+            
             $cart->image=$product->image;
             $cart->product_id=$product->id;
+            $cart->quantity=$request->quantity;
+
+            $cart->save();
+            return redirect()->back();
         }
         else
         {
