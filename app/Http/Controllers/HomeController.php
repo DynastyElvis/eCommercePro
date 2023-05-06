@@ -57,6 +57,10 @@ class HomeController extends Controller
             {
                 $cart->price=$product->discounted_price;
             }
+            else
+            {
+                $cart->price=$product->price;
+            }
             
             $cart->image=$product->image;
             $cart->product_id=$product->id;
