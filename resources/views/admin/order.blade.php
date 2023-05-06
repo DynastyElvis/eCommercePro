@@ -51,17 +51,21 @@
                         <th class="th_deg">delivery status</th>
                         <th class="th_deg">image</th>
                     </tr>
+
+                    @foreach ($order as $order)
+                        
                     <tr>
-                        <td>fgh</td>
-                        <td>fgh</td>
-                        <td>fgh</td>
-                        <td>fgh</td>
-                        <td>fgh</td>
-                        <td>fgh</td>
-                        <td>fgh</td>
-                        <td>fgh</td>
-                        <td>fgh</td>
+                        <td>{{$order->name}}</td>
+                        <td>{{$order->email}}</td>
+                        <td>{{$order->address}}</td>
+                        <td>{{$order->phone}}</td>
+                        <td>{{$order->product_title}}</td>
+                        <td>{{$order->quantity}}</td>
+                        <td>{{$order->price}}</td>
+                        <td>{{$order->payment_status}}</td>
+                        <td>{{$order->delivery_status}}</td>
                     </tr>
+                    @endforeach
                 </table>
             </div>
         </div>
