@@ -75,4 +75,10 @@ class HomeController extends Controller
         }
     }
 
+    public function show_cart()
+    {
+        return view('home.show_cart');
+    }
+
+
 }

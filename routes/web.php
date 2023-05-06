@@ -40,5 +40,6 @@ route::get('/update_product/{id}',[AdminController::class,'update_product']);
 route::post('/update_product_confirm/{id}',[AdminController::class,'update_product_confirm']); //post because we are updating
 route::get('/product_details/{id}',[HomeController::class,'product_details']);
 route::post('/add_cart/{id}',[HomeController::class,'add_cart']);
+route::get('/show_cart  ',[HomeController::class,'show_cart']); //post because we are updating
 
 
