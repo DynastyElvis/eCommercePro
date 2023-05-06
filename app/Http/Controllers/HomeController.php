@@ -47,6 +47,11 @@ class HomeController extends Controller
             $product=product::find($id);
             $cart=new cart;
             $cart->name=$user->name;
+            $cart->email=$user->email;
+            $cart->phone=$user->phone;
+            $cart->address=$user->address;
+            $cart->user_id=$user->id; 
+            $cart->Product_title=$product->title;
         }
         else
         {
