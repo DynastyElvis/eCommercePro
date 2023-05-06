@@ -47,19 +47,22 @@
       <div class="center">
         <table>
             <tr>
-                <th class="th_deg">Product title</th>
+                <th class="th_deg">Product </th>
                 <th class="th_deg">Quantity</th>
                 <th class="th_deg">Price</th>
                 <th class="th_deg">Image</th>
                 <th class="th_deg">Action</th>
             </tr>
+            @foreach ($cart as $cart)                
             <tr>
-                <th>shirt</th>
-                <th>233</th>
-                <th>33211</th>
-                <th>image</th>
-                <th>remove</th>
+                <td>{{$cart->product_title}}</td>
+                <td>{{$cart->quantity}}</td>
+                <td>{{$cart->price}}</td>
+                {{-- <th>{{$cart->product_title}}</th>
+                <th>{{$cart->product_title}}</th> --}}
             </tr>
+            @endforeach
+
         </table>
       </div>
       <!-- footer start -->
