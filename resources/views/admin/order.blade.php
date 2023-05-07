@@ -52,6 +52,7 @@
                         <th class="th_deg">delivery status</th>
                         {{-- <th class="th_deg">image</th> --}}
                         <th class="th_deg">Delivered</th>
+                        <th class="th_deg">Print PDF</th>
                     </tr>
 
                     @foreach ($order as $order)
@@ -71,8 +72,11 @@
                         </td> --}}
                         <td>
                             <a href="{{url('delivered', $order->id)}}" onclick="return confirm('Are you sure you want to confirm delivery')" class="btn btn-primary">Confirm</a></td>
+                            <td>
+                                <a href="{{url('pront_pdf', $order->id)}}" onclick="return confirm('Are you sure you want to download order elivery  details pdf?')" class="btn btn-secondary">Print</a></td>
                     </tr>
                     @endforeach
+
                 </table>
             </div>
         </div>
