@@ -49,7 +49,7 @@
     <p>Email: {{ $order->email }}</p>
     <p>Name: {{ $order->name }}</p>
     <p>Address: {{ $order->address }}</p>
-    <p>ID: {{ $order->id }}</p>
+    <p>Your ID: {{ $order->id }}</p>
 
     <table>
         <thead>
@@ -58,7 +58,7 @@
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Status</th>
-                <th>ID</th>
+                <th>Product ID</th>
             </tr>
         </thead>
         <tbody>

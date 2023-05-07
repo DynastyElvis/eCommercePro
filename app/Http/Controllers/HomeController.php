@@ -28,7 +28,18 @@ class HomeController extends Controller
         $usertype=Auth::user()->usertype;
         if($usertype=='1')
         {
-            return view('admin.home');
+            $total_product=product::all()->count();
+            $total_order=product::all()->count();
+            $total_user=product::all()->count();
+            $order=order::all();
+            $total_revenue=0;
+            foreach($order as $order)
+            {
+                $total_revenue=$total_revenue + $order->price;
+            }
+            $total_delivered=order::where('delivery_status','=','delivered')->get()->count();
+            $total_processing=order::where('delivery_status','=','processing')->get()->count();
+            return view('admin.home', compact('total_product', 'total_order', 'total_user', 'total_revenue', 'total_delivered', 'total_processing'));
         }
         else
         {
@@ -149,5 +160,27 @@ class HomeController extends Controller
               
         // return back();
     }
+    public function show_order()
+    {
+        if(Auth::id())
+        {
+            $user=Auth::user();
+            $userid=$user->id;
+            $order=order::where('user_id','=',$userid)->get();        
+            return view('home.order', compact('order'));
+        }
+        else{
+            return redirect('login');
+        }
+    }
+    public function cancel_order($id)
+    {
+        $order=order::find($id);
+        $order->delivery_status='Cancelled';
+        $order->save();
+        return redirect()->back();
+    }
+
+
 
 }                                                                                                         
