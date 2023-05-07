@@ -73,7 +73,7 @@
                         <td>
                             <a href="{{url('delivered', $order->id)}}" onclick="return confirm('Are you sure you want to confirm delivery')" class="btn btn-primary">Confirm</a></td>
                             <td>
-                                <a href="{{url('pront_pdf', $order->id)}}" onclick="return confirm('Are you sure you want to download order elivery  details pdf?')" class="btn btn-secondary">Print</a></td>
+                                <a href="{{url('pront_pdf', $order->id)}}" onclick="return confirm('Are you sure you want to download order delivery details pdf?')" class="btn btn-secondary">Print</a></td>
                     </tr>
                     @endforeach
 
