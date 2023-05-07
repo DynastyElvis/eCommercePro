@@ -69,7 +69,8 @@
                         {{-- <td>
                             <img class="width:40px; height 10px;" src="/product/{{$order->image}}" alt="">
                         </td> --}}
-                        <td><a href="{{url('delivered', $order->id)}}" class="btn btn-primary">Delivered</a></td>
+                        <td>
+                            <a href="{{url('delivered', $order->id)}}" onclick="return confirm('Are you sure you want to confirm delivery')" class="btn btn-primary">Confirm</a></td>
                     </tr>
                     @endforeach
                 </table>
