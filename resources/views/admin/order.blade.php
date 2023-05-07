@@ -56,7 +56,6 @@
                     </tr>
 
                     @foreach ($order as $order)
-                        
                     <tr>
                         <td>{{$order->name}}</td>
                         <td>{{$order->email}}</td>
@@ -70,10 +69,8 @@
                         {{-- <td>
                             <img class="width:40px; height 10px;" src="/product/{{$order->image}}" alt="">
                         </td> --}}
-                        <td>
-                            <a href="{{url('delivered', $order->id)}}" onclick="return confirm('Are you sure you want to confirm delivery')" class="btn btn-primary">Confirm</a></td>
-                            <td>
-                                <a href="{{url('pront_pdf', $order->id)}}" onclick="return confirm('Are you sure you want to download order delivery details pdf?')" class="btn btn-secondary">Print</a></td>
+                        <td><a href="{{url('delivered', $order->id)}}" onclick="return confirm('Are you sure you want to confirm delivery')" class="btn btn-primary">Confirm</a></td>
+                        <td><a href="{{url('print_pdf', $order->id)}}" onclick="return confirm('Are you sure you want to download order delivery details pdf?')" class="btn btn-secondary">Print</a></td>
                     </tr>
                     @endforeach
 

@@ -34,7 +34,7 @@ route::post('/add_category',[AdminController::class,'add_category']);
 route::get('/show_product',[AdminController::class,'show_product']);
 route::get('/order',[AdminController::class,'order']);
 route::get('/delivered/{id}',[AdminController::class,'delivered']);
-route::get('/pront_pdf/{id}',[AdminController::class,'pront_pdf']);
+route::get('/print_pdf/{id}',[AdminController::class,'print_pdf']);
 route::get('/delete_product/{id}',[AdminController::class,'delete_product']);
 route::get('/update_product/{id}',[AdminController::class,'update_product']);
 route::post('/update_product_confirm/{id}',[AdminController::class,'update_product_confirm']); //post because we are updating

@@ -105,12 +105,13 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    public function pront_pdf($id)
+    public function print_pdf($id)
     {
-        $table=order::find($id);
-        $pdf=PDF::loadView('admin.pdf', compact('order') );
+        $order = order::find($id);
+        $pdf = PDF::loadView('admin.pdf', compact('order'));
         return $pdf->download('order_details.pdf');
     }
+    
 
 }
 
