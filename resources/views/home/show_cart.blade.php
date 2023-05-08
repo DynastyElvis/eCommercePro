@@ -77,7 +77,6 @@
                 <th><img class="pic" src="/product/{{$cart->image}}" alt=""></th>
                 <th><a  class="btn btn-danger" onclick="confirmation(event)" href="{{url('/remove_cart', $cart->id)}}">Delete</a></th>
             </tr>
-
             <?php $totalprice=$totalprice + $cart->price ?>
             @endforeach
 
