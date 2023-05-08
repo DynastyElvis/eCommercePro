@@ -150,18 +150,18 @@ class HomeController extends Controller
     }
     public function stripePost(Request $request,$totalprice)
     {
-        // Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
     
-        // Stripe\Charge::create ([
-        //         "amount" => $totalprice * 100,
-        //         "currency" => "usd",
-        //         "source" => $request->stripeToken,
-        //         "description" => "Thanks for payment" 
-        // ]);
+        Stripe\Charge::create ([
+                "amount" => $totalprice * 100,
+                "currency" => "usd",
+                "source" => $request->stripeToken,
+                "description" => "Thanks for payment" 
+        ]);
       
-        // Session::flash('success', 'Payment successful!');
+        Session::flash('success', 'Payment successful!');
               
-        // return back();
+        return back();
     }
     public function show_order()
     {

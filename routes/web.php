@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GoogleController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -59,5 +61,7 @@ route::get('/stripe/{totalprice}',[HomeController::class,'stripe']); //post beca
 route::get('/stripe/{totalprice}',[HomeController::class,'stripePost'])->name('stripe.post'); //post because we are updating
 route::get('/show_order  ',[HomeController::class,'show_order']); //post because we are updating
 route::get('/product_search ',[HomeController::class,'product_search']); 
+route::get('/auth/google/callback',[GoogleController::class,'google_login']);//login with google 
+route::get('/auth/google',[GoogleController::class,'google_login_page']);
 
 
