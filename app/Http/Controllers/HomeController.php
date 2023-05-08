@@ -180,7 +180,11 @@ class HomeController extends Controller
         $order->save();
         return redirect()->back();
     }
-
-
+    public function product_search(Request $request)
+    {
+        // $search_text=$request->search;
+        // $product=product::where('title','LIKE','%$search_text%')->get(); //make sure you have product model at top
+        // return view('home.userpage', compact('product'));
+    }
 
 }                                                                                                         

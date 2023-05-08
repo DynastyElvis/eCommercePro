@@ -58,5 +58,6 @@ route::get('/cash_order  ',[HomeController::class,'cash_order']); //post because
 route::get('/stripe/{totalprice}',[HomeController::class,'stripe']); //post because we are updating
 route::get('/stripe/{totalprice}',[HomeController::class,'stripePost'])->name('stripe.post'); //post because we are updating
 route::get('/show_order  ',[HomeController::class,'show_order']); //post because we are updating
+route::get('/product_search ',[HomeController::class,'product_search']); 
 
 
