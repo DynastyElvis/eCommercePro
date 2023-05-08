@@ -85,6 +85,7 @@ class HomeController extends Controller
             $cart->quantity=$request->quantity;
 
             $cart->save();
+            Alert::success('Product added successfully', 'we have added the product to the cart');
             return redirect()->back();
         }
         else
